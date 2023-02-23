@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
+      "projectUniqueName": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
       "projectName": "ProyectoProcImgs",
-      "projectPath": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
+      "projectPath": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
       "packagesPath": "C:\\Users\\ricky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProyectoProcImgs\\obj\\",
+      "outputPath": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ricky\\AppData\\Roaming\\NuGet\\NuGet.Config",

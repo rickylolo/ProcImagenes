@@ -37,7 +37,6 @@ namespace ProyectoProcImgs
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -99,9 +98,9 @@ namespace ProyectoProcImgs
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(752, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 15);
+            this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Selecciona un canal:";
+            this.label2.Text = "Selecciona un filtro:";
             // 
             // label1
             // 
@@ -119,31 +118,18 @@ namespace ProyectoProcImgs
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(186, 536);
+            this.button1.Location = new System.Drawing.Point(30, 536);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 50);
             this.button1.TabIndex = 10;
             this.button1.Text = "Cargar Imagen";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(30, 536);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 50);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Activar Cámara";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // Histogram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 604);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
@@ -172,6 +158,5 @@ namespace ProyectoProcImgs
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
     }
 }

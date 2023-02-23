@@ -37,6 +37,7 @@ namespace ProyectoProcImgs
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace ProyectoProcImgs
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(22, 603);
+            this.button1.Location = new System.Drawing.Point(180, 603);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 57);
             this.button1.TabIndex = 2;
@@ -101,7 +102,7 @@ namespace ProyectoProcImgs
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 48);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Guardar";
+            this.button2.Text = "Guardar Imagen";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // comboBox1
@@ -125,11 +126,24 @@ namespace ProyectoProcImgs
             this.button3.Text = "OK";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(30, 603);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(118, 57);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Cargar Video";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Filters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 685);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
@@ -158,5 +172,6 @@ namespace ProyectoProcImgs
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
