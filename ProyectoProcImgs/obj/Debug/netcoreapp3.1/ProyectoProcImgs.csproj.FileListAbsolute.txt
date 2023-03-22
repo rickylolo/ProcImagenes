@@ -24,7 +24,9 @@ C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\D
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\Debug\netcoreapp3.1\ProyectoProcImgs.runtimeconfig.dev.json
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\Debug\netcoreapp3.1\ProyectoProcImgs.dll
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\Debug\netcoreapp3.1\ProyectoProcImgs.pdb
-C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.csproj.AssemblyReference.cache
+C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\Debug\netcoreapp3.1\AForge.dll
+C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\Debug\netcoreapp3.1\AForge.Video.dll
+C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\Debug\netcoreapp3.1\AForge.Video.DirectShow.dll
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.FaceRecog.resources
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.Filters.resources
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.FormMain.resources
@@ -35,6 +37,8 @@ C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\D
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.AssemblyInfoInputs.cache
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.AssemblyInfo.cs
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.csproj.CoreCompileInputs.cache
+C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.csproj.CopyComplete
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.dll
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.pdb
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.genruntimeconfig.cache
+C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.csproj.AssemblyReference.cache
