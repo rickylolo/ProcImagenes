@@ -55,6 +55,7 @@ namespace ProyectoProcImgs
             this.camera_pb.Location = new System.Drawing.Point(53, 57);
             this.camera_pb.Name = "camera_pb";
             this.camera_pb.Size = new System.Drawing.Size(1334, 551);
+            this.camera_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.camera_pb.TabIndex = 17;
             this.camera_pb.TabStop = false;
             // 
