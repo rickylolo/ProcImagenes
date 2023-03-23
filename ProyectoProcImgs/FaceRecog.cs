@@ -49,7 +49,7 @@ namespace ProyectoProcImgs
                 availableDevices = true;
                 for (int i= 0; i < myDevices.Count; i++)           
                     devicesCB.Items.Add(myDevices[i].Name.ToString());
-                devicesCB.Text = myDevices[0].ToString();
+                devicesCB.Text = myDevices[0].Name.ToString();
             }
             else
             {

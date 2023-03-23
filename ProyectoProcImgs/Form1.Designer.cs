@@ -33,7 +33,6 @@ namespace ProyectoProcImgs
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btn_Home = new System.Windows.Forms.Button();
             this.btnHistogram = new System.Windows.Forms.Button();
             this.btnFiltros = new System.Windows.Forms.Button();
             this.btnCamera = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@ namespace ProyectoProcImgs
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnCloseChildForm);
             this.panelMenu.Controls.Add(this.lblTitle);
-            this.panelMenu.Controls.Add(this.btn_Home);
             this.panelMenu.Controls.Add(this.btnHistogram);
             this.panelMenu.Controls.Add(this.btnFiltros);
             this.panelMenu.Controls.Add(this.btnCamera);
@@ -62,17 +60,18 @@ namespace ProyectoProcImgs
             // 
             // btnCloseChildForm
             // 
-            this.btnCloseChildForm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.BackgroundImage")));
+            this.btnCloseChildForm.BackgroundImage = global::ProyectoProcImgs.Properties.Resources.home;
             this.btnCloseChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseChildForm.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCloseChildForm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCloseChildForm.Location = new System.Drawing.Point(932, 0);
+            this.btnCloseChildForm.Location = new System.Drawing.Point(1012, 0);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
             this.btnCloseChildForm.Size = new System.Drawing.Size(80, 77);
             this.btnCloseChildForm.TabIndex = 6;
+            this.btnCloseChildForm.Text = "Inicio";
             this.btnCloseChildForm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCloseChildForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
@@ -92,24 +91,6 @@ namespace ProyectoProcImgs
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Inicio";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_Home
-            // 
-            this.btn_Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Home.BackgroundImage")));
-            this.btn_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_Home.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Home.FlatAppearance.BorderSize = 0;
-            this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Home.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_Home.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Home.Location = new System.Drawing.Point(1012, 0);
-            this.btn_Home.Name = "btn_Home";
-            this.btn_Home.Size = new System.Drawing.Size(80, 77);
-            this.btn_Home.TabIndex = 4;
-            this.btn_Home.Text = "Inicio";
-            this.btn_Home.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Home.UseVisualStyleBackColor = true;
             // 
             // btnHistogram
             // 
@@ -225,7 +206,6 @@ namespace ProyectoProcImgs
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnHistogram;
         private System.Windows.Forms.Button btnFiltros;
-        private System.Windows.Forms.Button btn_Home;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelDesktopPane;

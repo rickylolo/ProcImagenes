@@ -49,10 +49,12 @@ namespace ProyectoProcImgs
             // 
             // camera_pb
             // 
-            this.camera_pb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.camera_pb.Location = new System.Drawing.Point(343, 64);
+            this.camera_pb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.camera_pb.Location = new System.Drawing.Point(53, 57);
             this.camera_pb.Name = "camera_pb";
-            this.camera_pb.Size = new System.Drawing.Size(703, 551);
+            this.camera_pb.Size = new System.Drawing.Size(1334, 551);
             this.camera_pb.TabIndex = 17;
             this.camera_pb.TabStop = false;
             // 
@@ -68,11 +70,11 @@ namespace ProyectoProcImgs
             // chooseWB
             // 
             this.chooseWB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.chooseWB.Location = new System.Drawing.Point(971, 642);
+            this.chooseWB.Location = new System.Drawing.Point(971, 643);
             this.chooseWB.Name = "chooseWB";
             this.chooseWB.Size = new System.Drawing.Size(75, 23);
             this.chooseWB.TabIndex = 19;
-            this.chooseWB.Text = "OK";
+            this.chooseWB.Text = "Aceptar";
             this.chooseWB.UseVisualStyleBackColor = true;
             this.chooseWB.Click += new System.EventHandler(this.chooseWB_Click);
             // 
