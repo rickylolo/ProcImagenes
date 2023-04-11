@@ -41,4 +41,3 @@ C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\D
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.dll
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.pdb
 C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.genruntimeconfig.cache
-C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\obj\Debug\netcoreapp3.1\ProyectoProcImgs.csproj.AssemblyReference.cache
