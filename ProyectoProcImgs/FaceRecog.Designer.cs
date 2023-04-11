@@ -33,6 +33,8 @@ namespace ProyectoProcImgs
             this.camera_pb = new System.Windows.Forms.PictureBox();
             this.devicesCB = new System.Windows.Forms.ComboBox();
             this.chooseWB = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_rostros = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.camera_pb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,11 +81,32 @@ namespace ProyectoProcImgs
             this.chooseWB.UseVisualStyleBackColor = true;
             this.chooseWB.Click += new System.EventHandler(this.chooseWB_Click);
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 643);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 15);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Rostros detectados: ";
+            // 
+            // lbl_rostros
+            // 
+            this.lbl_rostros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_rostros.AutoSize = true;
+            this.lbl_rostros.Location = new System.Drawing.Point(169, 643);
+            this.lbl_rostros.Name = "lbl_rostros";
+            this.lbl_rostros.Size = new System.Drawing.Size(0, 15);
+            this.lbl_rostros.TabIndex = 21;
+            // 
             // FaceRecog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1424, 720);
+            this.Controls.Add(this.lbl_rostros);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.chooseWB);
             this.Controls.Add(this.devicesCB);
             this.Controls.Add(this.camera_pb);
@@ -103,5 +126,7 @@ namespace ProyectoProcImgs
         private System.Windows.Forms.PictureBox camera_pb;
         private System.Windows.Forms.ComboBox devicesCB;
         private System.Windows.Forms.Button chooseWB;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_rostros;
     }
 }
