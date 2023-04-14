@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AForge.Video.DirectShow;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace ProyectoProcImgs
         {
             InitializeComponent();
         }
-    
+
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -37,25 +38,6 @@ namespace ProyectoProcImgs
             CargarFiltros();
         }
 
-        //CARGAR IMAGEN
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*";
-            openFileDialog1.Title = "Seleccionar imagen";
-
-            try
-            {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al seleccionar archivo: " + ex.Message);
-            }
-        }
 
         // SELECCIONAR FILTRO
         private void button3_Click(object sender, EventArgs e)
@@ -212,6 +194,65 @@ namespace ProyectoProcImgs
                     }
                 }
             }
+        }
+
+
+        //CARGAR IMAGEN
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            miVideo.Hide();
+            miVideoFiltro.Hide();
+            pictureBox1.Show();
+            pictureBox2.Show();
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*";
+            openFileDialog1.Title = "Seleccionar imagen";
+
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar archivo: " + ex.Message);
+            }
+        }
+
+        //CARGAR VIDEO
+        private void button4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Hide();
+            pictureBox2.Hide();
+            miVideo.Show();
+            miVideoFiltro.Show();
+
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Archivos de video|*.mp4";
+            openFileDialog1.Title = "Seleccionar video";
+
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    FileVideoSource fileSource = new FileVideoSource(openFileDialog1.FileName);
+                    miVideo.VideoSource = fileSource;
+                    miVideo.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar archivo: " + ex.Message);
+            }
+        }
+
+
+        private void miVideo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

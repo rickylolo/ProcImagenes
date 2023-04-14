@@ -8,6 +8,7 @@ using Emgu.CV.Structure;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 
+
 namespace ProyectoProcImgs
 {
     public partial class FaceRecog : Form
@@ -19,7 +20,7 @@ namespace ProyectoProcImgs
 
 
 
-        CascadeClassifier faceCascade = new CascadeClassifier("C:/Users/ricky/source/repos/ProyectoProcImgs/ProcImagenes/ProyectoProcImgs/haarcascade_frontalface_alt_tree.xml");
+        CascadeClassifier faceCascade = new CascadeClassifier("C:/Users/ricky/source/repos/ProyectoProcImgs/ProcImagenes/ProyectoProcImgs/haarcascade_frontalface_alt2.xml");
         public FaceRecog()
         {
             InitializeComponent();
@@ -67,7 +68,12 @@ namespace ProyectoProcImgs
             {
                 myWebCam.SignalToStop();
                 myWebCam = null;
+
+               
             }
+
+
+        
         }
 
         private void chooseWB_Click(object sender, EventArgs e)
@@ -83,7 +89,10 @@ namespace ProyectoProcImgs
         private void Capturing(object sender, NewFrameEventArgs eventArgs)
         {
 
-            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            if (myWebCam != null && myWebCam.IsRunning)
+            {
+
+                Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
             Image<Bgr, byte> imageByte = new Image<Bgr, byte>(bitmap.Width, bitmap.Height);
             BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadOnly, bitmap.PixelFormat);
 
@@ -93,30 +102,38 @@ namespace ProyectoProcImgs
             imageByte.Bytes = bytes;
             bitmap.UnlockBits(bitmapData);
 
-            Rectangle[] faces = faceCascade.DetectMultiScale(imageByte, 1.1, 0);
+            Rectangle[] faces = faceCascade.DetectMultiScale(imageByte, 1.3, 5);
 
             foreach (Rectangle face in faces)
             {
-                imageByte.Draw(face, new Bgr(Color.Blue), 2);
+                imageByte.Draw(face, new Bgr(Color.Red), 2);
             }
 
             Bitmap bitmapOutput = imageByte.ToBitmap();
             camera_pb.Image = bitmapOutput;
 
+          
             int numFaces = faces.Length;
+
             if (lbl_rostros.InvokeRequired)
-            {
-                lbl_rostros.Invoke(new Action(() =>
+                {
+                    lbl_rostros.Invoke(new Action(() =>
+                    {
+                        lbl_rostros.Text = numFaces.ToString();
+                    }));
+             }
+                else
                 {
                     lbl_rostros.Text = numFaces.ToString();
-                }));
-            }
+                }
 
-          
+
             bitmap.Dispose();
             imageByte.Dispose();
-         
 
+              
+
+            }
 
 
         }
@@ -124,6 +141,8 @@ namespace ProyectoProcImgs
         private void FaceRecog_FormClosed(object sender, FormClosedEventArgs e)
         {
             closeWebCam();
+
+
         }
 
    

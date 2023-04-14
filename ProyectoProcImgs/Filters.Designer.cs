@@ -38,6 +38,8 @@ namespace ProyectoProcImgs
             this.cmbFiltros = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.miVideo = new AForge.Controls.VideoSourcePlayer();
+            this.miVideoFiltro = new AForge.Controls.VideoSourcePlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +49,7 @@ namespace ProyectoProcImgs
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(616, 9);
+            this.label1.Location = new System.Drawing.Point(783, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 28);
             this.label1.TabIndex = 0;
@@ -57,7 +59,7 @@ namespace ProyectoProcImgs
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(991, 64);
+            this.label2.Location = new System.Drawing.Point(1325, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 1;
@@ -68,7 +70,7 @@ namespace ProyectoProcImgs
             this.btn_CargarImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_CargarImagen.FlatAppearance.BorderSize = 0;
             this.btn_CargarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CargarImagen.Location = new System.Drawing.Point(180, 808);
+            this.btn_CargarImagen.Location = new System.Drawing.Point(180, 862);
             this.btn_CargarImagen.Name = "btn_CargarImagen";
             this.btn_CargarImagen.Size = new System.Drawing.Size(118, 57);
             this.btn_CargarImagen.TabIndex = 2;
@@ -79,9 +81,9 @@ namespace ProyectoProcImgs
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 124);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 151);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(636, 585);
+            this.pictureBox1.Size = new System.Drawing.Size(813, 585);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -89,9 +91,9 @@ namespace ProyectoProcImgs
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox2.Location = new System.Drawing.Point(687, 124);
+            this.pictureBox2.Location = new System.Drawing.Point(888, 151);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(622, 585);
+            this.pictureBox2.Size = new System.Drawing.Size(755, 585);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -101,7 +103,7 @@ namespace ProyectoProcImgs
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1171, 817);
+            this.button2.Location = new System.Drawing.Point(1505, 871);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 48);
             this.button2.TabIndex = 5;
@@ -113,7 +115,7 @@ namespace ProyectoProcImgs
             // 
             this.cmbFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltros.FormattingEnabled = true;
-            this.cmbFiltros.Location = new System.Drawing.Point(1108, 64);
+            this.cmbFiltros.Location = new System.Drawing.Point(1442, 64);
             this.cmbFiltros.Name = "cmbFiltros";
             this.cmbFiltros.Size = new System.Drawing.Size(121, 23);
             this.cmbFiltros.TabIndex = 6;
@@ -123,7 +125,7 @@ namespace ProyectoProcImgs
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1247, 64);
+            this.button3.Location = new System.Drawing.Point(1581, 64);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(53, 23);
             this.button3.TabIndex = 7;
@@ -136,18 +138,42 @@ namespace ProyectoProcImgs
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(30, 808);
+            this.button4.Location = new System.Drawing.Point(30, 862);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(118, 57);
             this.button4.TabIndex = 8;
             this.button4.Text = "Cargar Video";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // miVideo
+            // 
+            this.miVideo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.miVideo.Location = new System.Drawing.Point(30, 151);
+            this.miVideo.Name = "miVideo";
+            this.miVideo.Size = new System.Drawing.Size(813, 585);
+            this.miVideo.TabIndex = 9;
+            this.miVideo.Text = "videoSourcePlayer1";
+            this.miVideo.VideoSource = null;
+            this.miVideo.Click += new System.EventHandler(this.miVideo_Click);
+            // 
+            // miVideoFiltro
+            // 
+            this.miVideoFiltro.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.miVideoFiltro.Location = new System.Drawing.Point(888, 151);
+            this.miVideoFiltro.Name = "miVideoFiltro";
+            this.miVideoFiltro.Size = new System.Drawing.Size(774, 585);
+            this.miVideoFiltro.TabIndex = 10;
+            this.miVideoFiltro.Text = "videoSourcePlayer1";
+            this.miVideoFiltro.VideoSource = null;
             // 
             // Filters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 890);
+            this.ClientSize = new System.Drawing.Size(1674, 944);
+            this.Controls.Add(this.miVideoFiltro);
+            this.Controls.Add(this.miVideo);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.cmbFiltros);
@@ -178,5 +204,7 @@ namespace ProyectoProcImgs
         private System.Windows.Forms.ComboBox cmbFiltros;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private AForge.Controls.VideoSourcePlayer miVideo;
+        private AForge.Controls.VideoSourcePlayer miVideoFiltro;
     }
 }

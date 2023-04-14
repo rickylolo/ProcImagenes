@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -274,6 +275,81 @@ namespace ProyectoProcImgs
             catch (Exception ex)
             {
                 MessageBox.Show("Error al seleccionar archivo: " + ex.Message);
+            }
+        }
+
+        
+        // Guardar Histogramas
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //RGB
+            if (pictureBoxRGB.Image != null)
+            {
+                Image imagen = pictureBoxRGB.Image;
+
+                SaveFileDialog dialogoGuardar = new SaveFileDialog();
+                dialogoGuardar.Filter = "Archivos JPG (*.jpg)|*.jpg";
+                dialogoGuardar.Title = "Guardar imagen RGB";
+                dialogoGuardar.FileName = "RGB.jpg";
+                dialogoGuardar.ShowDialog();
+
+                if (dialogoGuardar.FileName != "")
+                {
+                    imagen.Save(dialogoGuardar.FileName, ImageFormat.Jpeg);
+                }
+            }
+
+            // RED
+            if (pictureBoxR.Image != null)
+            {
+                Image imagen = pictureBoxR.Image;
+
+                SaveFileDialog dialogoGuardar = new SaveFileDialog();
+                dialogoGuardar.Filter = "Archivos JPG (*.jpg)|*.jpg";
+                dialogoGuardar.Title = "Guardar imagen como...";
+                dialogoGuardar.FileName = "Red.jpg";
+                dialogoGuardar.ShowDialog();
+
+                if (dialogoGuardar.FileName != "")
+                {
+                    imagen.Save(dialogoGuardar.FileName, ImageFormat.Jpeg);
+                }
+            }
+
+
+            // GREEN
+            if (pictureBoxG.Image != null)
+            {
+                Image imagen = pictureBoxG.Image;
+
+                SaveFileDialog dialogoGuardar = new SaveFileDialog();
+                dialogoGuardar.Filter = "Archivos JPG (*.jpg)|*.jpg";
+                dialogoGuardar.Title = "Guardar imagen como...";
+                dialogoGuardar.FileName = "Green.jpg";
+                dialogoGuardar.ShowDialog();
+
+                if (dialogoGuardar.FileName != "")
+                {
+                    imagen.Save(dialogoGuardar.FileName, ImageFormat.Jpeg);
+                }
+            }
+
+
+            // BLUE
+            if (pictureBoxB.Image != null)
+            {
+                Image imagen = pictureBoxB.Image;
+
+                SaveFileDialog dialogoGuardar = new SaveFileDialog();
+                dialogoGuardar.Filter = "Archivos JPG (*.jpg)|*.jpg";
+                dialogoGuardar.Title = "Guardar imagen como...";
+                dialogoGuardar.FileName = "Blue.jpg";
+                dialogoGuardar.ShowDialog();
+
+                if (dialogoGuardar.FileName != "")
+                {
+                    imagen.Save(dialogoGuardar.FileName, ImageFormat.Jpeg);
+                }
             }
         }
     }
