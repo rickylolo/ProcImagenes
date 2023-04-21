@@ -155,6 +155,7 @@ namespace ProyectoProcImgs
             this.miVideo.TabIndex = 9;
             this.miVideo.Text = "videoSourcePlayer1";
             this.miVideo.VideoSource = null;
+            this.miVideo.NewFrame += new AForge.Controls.VideoSourcePlayer.NewFrameHandler(this.miVideo_NewFrame_1);
             this.miVideo.Click += new System.EventHandler(this.miVideo_Click);
             // 
             // miVideoFiltro
@@ -185,6 +186,7 @@ namespace ProyectoProcImgs
             this.Controls.Add(this.label1);
             this.Name = "Filters";
             this.Text = "Filters";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Filters_FormClosed);
             this.Load += new System.EventHandler(this.Filters_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

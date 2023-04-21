@@ -1,17 +1,17 @@
-﻿using AForge.Video.DirectShow;
+﻿
+using AForge.Video.DirectShow;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ProyectoProcImgs
 {
     public partial class Filters : Form
     {
+
+        bool isImagen = true;
+
         public Filters()
         {
             InitializeComponent();
@@ -45,31 +45,66 @@ namespace ProyectoProcImgs
             switch (cmbFiltros.SelectedIndex)
             {
                 case 0: // Blanco y Negro
-                    AplicarFiltroBlancoYNegro();
+                    if (isImagen)
+                    {
+                        if (pictureBox1.Image != null)
+                        {
+                            Bitmap bitmap = new Bitmap(pictureBox1.Image);
+                            pictureBox2.Image = AplicarFiltroBlancoYNegro(bitmap);
+                        }
+                    }
+                    else
+                    {
+
+                    }
                     break;
                 case 1: // Negativo
-                    AplicarFiltroNegativo();
+                    if (isImagen)
+                    {
+                        if (pictureBox1.Image != null)
+                        {
+                            Bitmap bitmap = new Bitmap(pictureBox1.Image);
+                            pictureBox2.Image = AplicarFiltroNegativo(bitmap);
+                        }
+                    }
+                    else
+                    {
+
+                    }
                     break;
                 case 2: // Sepia
-                    AplicarFiltroSepia();
+                    if (isImagen)
+                    {
+                        if (pictureBox1.Image != null)
+                        {
+                            Bitmap bitmap = new Bitmap(pictureBox1.Image);
+                            pictureBox2.Image = AplicarFiltroSepia(bitmap);
+                        }
+                    }
+                    else
+                    {
+                       
+        
+
+                    }
                     break;
 
             }
         }
 
 
-        // FILTRO BLANCO Y NEGRO
-        private void AplicarFiltroBlancoYNegro()
-        {
-            if (pictureBox1.Image != null)
-            {
-                Image imagenOriginal = pictureBox1.Image;
-                Bitmap bitmap = new Bitmap(pictureBox1.Image);
-                Bitmap imagenGrises = new Bitmap(imagenOriginal.Width, imagenOriginal.Height);
 
-                for (int y = 0; y < imagenOriginal.Height; y++)
+
+
+        // FILTRO BLANCO Y NEGRO
+        private Bitmap AplicarFiltroBlancoYNegro(Bitmap bitmap)
+        {
+
+                Bitmap imagenGrises = new Bitmap(bitmap.Width, bitmap.Height);
+
+                for (int y = 0; y < bitmap.Height; y++)
                 {
-                    for (int x = 0; x < imagenOriginal.Width; x++)
+                    for (int x = 0; x < bitmap.Width; x++)
                     {
                         Color pixel = bitmap.GetPixel(x, y);
 
@@ -81,22 +116,18 @@ namespace ProyectoProcImgs
                     }
                 }
 
-                pictureBox2.Image = imagenGrises;
-            }
+                return imagenGrises;
+            
         }
         // FILTRO NEGATIVO
-        private void AplicarFiltroNegativo()
-        {
-            if (pictureBox1.Image != null)
-            {
-                Image imagenOriginal = pictureBox1.Image;
-                Bitmap bitmap = new Bitmap(pictureBox1.Image);
-                Bitmap imagenNegativa = new Bitmap(imagenOriginal.Width, imagenOriginal.Height);
+        private Bitmap AplicarFiltroNegativo(Bitmap bitmap)
+        {        
+                Bitmap imagenNegativa = new Bitmap(bitmap.Width, bitmap.Height);
 
 
-                for (int y = 0; y < imagenOriginal.Height; y++)
+                for (int y = 0; y < bitmap.Height; y++)
                 {
-                    for (int x = 0; x < imagenOriginal.Width; x++)
+                    for (int x = 0; x < bitmap.Width; x++)
                     {
                         Color pixel = bitmap.GetPixel(x, y);
 
@@ -111,23 +142,21 @@ namespace ProyectoProcImgs
                 }
 
 
-                pictureBox2.Image = imagenNegativa;
-            }
+                return imagenNegativa;
+            
         }
         // FILTRO SEPIA
-        private void AplicarFiltroSepia()
+        private Bitmap AplicarFiltroSepia(Bitmap bitmap)
         {
-            if (pictureBox1.Image != null)
-            {
-                Image imagenOriginal = pictureBox1.Image;
-                Bitmap bitmap = new Bitmap(pictureBox1.Image);
-                Bitmap imagenSepia = new Bitmap(imagenOriginal.Width, imagenOriginal.Height);
+
+ 
+                Bitmap imagenSepia = new Bitmap(bitmap.Width, bitmap.Height);
 
 
 
-                for (int y = 0; y < imagenOriginal.Height; y++)
+                for (int y = 0; y < bitmap.Height; y++)
                 {
-                    for (int x = 0; x < imagenOriginal.Width; x++)
+                    for (int x = 0; x < bitmap.Width; x++)
                     {
                         Color pixel = bitmap.GetPixel(x, y);
 
@@ -152,10 +181,9 @@ namespace ProyectoProcImgs
 
 
 
-                pictureBox2.Image = imagenSepia;
-            }
+                return imagenSepia;
+            
         }
-
 
 
         private void CargarFiltros()
@@ -200,7 +228,7 @@ namespace ProyectoProcImgs
         //CARGAR IMAGEN
         private void button1_Click(object sender, EventArgs e)
         {
-
+            isImagen = true;
             miVideo.Hide();
             miVideoFiltro.Hide();
             pictureBox1.Show();
@@ -225,6 +253,7 @@ namespace ProyectoProcImgs
         //CARGAR VIDEO
         private void button4_Click(object sender, EventArgs e)
         {
+            isImagen = false;
             pictureBox1.Hide();
             pictureBox2.Hide();
             miVideo.Show();
@@ -239,8 +268,13 @@ namespace ProyectoProcImgs
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     FileVideoSource fileSource = new FileVideoSource(openFileDialog1.FileName);
+
+
                     miVideo.VideoSource = fileSource;
+  
                     miVideo.Start();
+                   
+   
                 }
             }
             catch (Exception ex)
@@ -252,6 +286,38 @@ namespace ProyectoProcImgs
 
         private void miVideo_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void miVideo_NewFrame_1(object sender, ref Bitmap image)
+        {
+         
+
+            if (image != null)
+            {
+             // TO DO
+                Bitmap imagenFiltrada = image;
+
+
+                imagenFiltrada.SetResolution(image.Width, image.Height);
+
+
+                miVideoFiltro.BackgroundImage = imagenFiltrada;
+            }
+        }
+
+        private void Filters_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (miVideo.VideoSource != null)
+            {
+                miVideo.SignalToStop();
+                miVideo.WaitForStop();
+            }
+            if (miVideoFiltro.VideoSource != null)
+            {
+                miVideoFiltro.SignalToStop();
+                miVideoFiltro.WaitForStop();
+            }
 
         }
     }
