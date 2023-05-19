@@ -234,7 +234,7 @@ namespace ProyectoProcImgs
             pictureBox1.Show();
             pictureBox2.Show();
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*";
+            openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png|Todos los archivos|*.*";
             openFileDialog1.Title = "Seleccionar imagen";
 
             try
@@ -288,7 +288,7 @@ namespace ProyectoProcImgs
         {
 
         }
-
+        Bitmap imagenFiltrada;
         private void miVideo_NewFrame_1(object sender, ref Bitmap image)
         {
          
@@ -296,11 +296,9 @@ namespace ProyectoProcImgs
             if (image != null)
             {
              // TO DO
-                Bitmap imagenFiltrada = image;
+                imagenFiltrada = image;
 
-
-                imagenFiltrada.SetResolution(image.Width, image.Height);
-
+                //imagenFiltrada = AplicarFiltroNegativo(image);
 
                 miVideoFiltro.BackgroundImage = imagenFiltrada;
             }

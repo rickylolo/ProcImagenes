@@ -17,7 +17,7 @@ namespace ProyectoProcImgs
         private FilterInfoCollection myDevices;
         private VideoCaptureDevice myWebCam;
 
-
+        private bool isFormClosing = false;
 
 
         CascadeClassifier faceCascade = new CascadeClassifier("C:/Users/ricky/source/repos/ProyectoProcImgs/ProcImagenes/ProyectoProcImgs/haarcascade_frontalface_alt2.xml");
@@ -66,14 +66,14 @@ namespace ProyectoProcImgs
         {
             if(myWebCam!=null && myWebCam.IsRunning)
             {
-                myWebCam.SignalToStop();
-                myWebCam = null;
+                if (myWebCam != null && myWebCam.IsRunning)
+                {
+                    myWebCam.SignalToStop();
+                    myWebCam.WaitForStop();
+                    myWebCam = null;
+                }
 
-               
             }
-
-
-        
         }
 
         private void chooseWB_Click(object sender, EventArgs e)
@@ -88,11 +88,10 @@ namespace ProyectoProcImgs
 
         private void Capturing(object sender, NewFrameEventArgs eventArgs)
         {
-
             if (myWebCam != null && myWebCam.IsRunning)
             {
 
-                Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+               Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
             Image<Bgr, byte> imageByte = new Image<Bgr, byte>(bitmap.Width, bitmap.Height);
             BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadOnly, bitmap.PixelFormat);
 
@@ -107,29 +106,32 @@ namespace ProyectoProcImgs
             foreach (Rectangle face in faces)
             {
                 imageByte.Draw(face, new Bgr(Color.Red), 2);
+
             }
 
             Bitmap bitmapOutput = imageByte.ToBitmap();
-            camera_pb.Image = bitmapOutput;
+           
 
           
             int numFaces = faces.Length;
 
-            if (lbl_rostros.InvokeRequired)
+                // Dibujar el número de rostros detectados
+                using (Graphics graphics = Graphics.FromImage(bitmapOutput))
                 {
-                    lbl_rostros.Invoke(new Action(() =>
+                    using (Font font = new Font("Arial", 10, FontStyle.Bold))
                     {
-                        lbl_rostros.Text = numFaces.ToString();
-                    }));
-             }
-                else
-                {
-                    lbl_rostros.Text = numFaces.ToString();
+                        string text = "Rostros detectados: " + numFaces;
+                        Size textSize = TextRenderer.MeasureText(text, font);
+                        int x = bitmapOutput.Width - textSize.Width - 10;
+                        int y = bitmapOutput.Height - textSize.Height - 10;
+
+                        graphics.DrawString(text, font, Brushes.White, x, y);
+                    }
                 }
 
-
-            bitmap.Dispose();
-            imageByte.Dispose();
+                camera_pb.Image = bitmapOutput;
+                bitmap.Dispose();
+                imageByte.Dispose();
 
               
 
@@ -140,11 +142,14 @@ namespace ProyectoProcImgs
 
         private void FaceRecog_FormClosed(object sender, FormClosedEventArgs e)
         {
-            closeWebCam();
-
+         
 
         }
 
-   
+        private void FaceRecog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            isFormClosing = true;
+ 
+        }
     }
 }

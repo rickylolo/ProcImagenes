@@ -260,7 +260,7 @@ namespace ProyectoProcImgs
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*";
+            openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png|Todos los archivos|*.*";
             openFileDialog1.Title = "Seleccionar imagen";
 
             try
