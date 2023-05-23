@@ -17,10 +17,10 @@ namespace ProyectoProcImgs
         private FilterInfoCollection myDevices;
         private VideoCaptureDevice myWebCam;
 
-        private bool isFormClosing = false;
 
 
-        CascadeClassifier faceCascade = new CascadeClassifier("C:/Users/ricky/Documents/GitHub/ProcImagenes/ProyectoProcImgs/haarcascade_frontalface_alt2.xml");
+
+        CascadeClassifier faceCascade = new CascadeClassifier("haarcascade_frontalface_alt2.xml");
         public FaceRecog()
         {
             InitializeComponent();
@@ -66,12 +66,9 @@ namespace ProyectoProcImgs
         {
             if(myWebCam!=null && myWebCam.IsRunning)
             {
-
-                    myWebCam.SignalToStop();
-                    myWebCam.WaitForStop();
-                    myWebCam = null;
-                
-
+               myWebCam.SignalToStop();
+               myWebCam.WaitForStop();
+               myWebCam = null;         
             }
         }
 

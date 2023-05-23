@@ -119,3 +119,4 @@ C:\Users\ricky\Documents\GitHub\ProcImagenes\ProyectoProcImgs\obj\Release\netcor
 C:\Users\ricky\Documents\GitHub\ProcImagenes\ProyectoProcImgs\obj\Release\netcoreapp3.1\ProyectoProcImgs.csproj.CopyComplete
 C:\Users\ricky\Documents\GitHub\ProcImagenes\ProyectoProcImgs\obj\Release\netcoreapp3.1\ProyectoProcImgs.dll
 C:\Users\ricky\Documents\GitHub\ProcImagenes\ProyectoProcImgs\obj\Release\netcoreapp3.1\ProyectoProcImgs.pdb
+C:\Users\ricky\source\repos\ProyectoProcImgs\ProcImagenes\ProyectoProcImgs\bin\Release\netcoreapp3.1\haarcascade_frontalface_alt2.xml

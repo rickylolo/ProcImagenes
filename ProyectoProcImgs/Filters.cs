@@ -233,6 +233,11 @@ namespace ProyectoProcImgs
             miVideoFiltro.Hide();
             pictureBox1.Show();
             pictureBox2.Show();
+            if (miVideo.IsRunning)
+            {
+                miVideo.SignalToStop();
+                miVideo.WaitForStop();
+            }
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png|Todos los archivos|*.*";
             openFileDialog1.Title = "Seleccionar imagen";
@@ -258,23 +263,26 @@ namespace ProyectoProcImgs
             pictureBox2.Hide();
             miVideo.Show();
             miVideoFiltro.Show();
+      
 
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Archivos de video|*.mp4";
-            openFileDialog1.Title = "Seleccionar video";
+
+            OpenFileDialog openFileDialog2 = new OpenFileDialog();
+            openFileDialog2.Filter = "Archivos de video|*.mp4";
+            openFileDialog2.Title = "Seleccionar video";
 
             try
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    FileVideoSource fileSource = new FileVideoSource(openFileDialog1.FileName);
-
-
+                if (openFileDialog2.ShowDialog() == DialogResult.OK)
+                {                          
+                    if (miVideo != null && miVideo.IsRunning)
+                    {
+                        miVideo.SignalToStop();
+                        miVideo.WaitForStop();
+              
+                    }               
+                    FileVideoSource fileSource = new FileVideoSource(openFileDialog2.FileName);
                     miVideo.VideoSource = fileSource;
-  
                     miVideo.Start();
-                   
-   
                 }
             }
             catch (Exception ex)
@@ -293,7 +301,7 @@ namespace ProyectoProcImgs
         {
          
 
-            if (image != null)
+            if (image != null && !isImagen)
             {
              // TO DO
                 imagenFiltrada = image;

@@ -70,7 +70,7 @@ namespace ProyectoProcImgs
             this.btn_CargarImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_CargarImagen.FlatAppearance.BorderSize = 0;
             this.btn_CargarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CargarImagen.Location = new System.Drawing.Point(180, 862);
+            this.btn_CargarImagen.Location = new System.Drawing.Point(180, 667);
             this.btn_CargarImagen.Name = "btn_CargarImagen";
             this.btn_CargarImagen.Size = new System.Drawing.Size(118, 57);
             this.btn_CargarImagen.TabIndex = 2;
@@ -80,20 +80,22 @@ namespace ProyectoProcImgs
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 151);
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Location = new System.Drawing.Point(67, 121);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(813, 585);
+            this.pictureBox1.Size = new System.Drawing.Size(515, 443);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox2.Location = new System.Drawing.Point(888, 151);
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Location = new System.Drawing.Point(1057, 121);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(755, 585);
+            this.pictureBox2.Size = new System.Drawing.Size(506, 443);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -103,7 +105,7 @@ namespace ProyectoProcImgs
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1505, 871);
+            this.button2.Location = new System.Drawing.Point(1505, 676);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 48);
             this.button2.TabIndex = 5;
@@ -138,7 +140,7 @@ namespace ProyectoProcImgs
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(30, 862);
+            this.button4.Location = new System.Drawing.Point(30, 667);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(118, 57);
             this.button4.TabIndex = 8;
@@ -148,10 +150,11 @@ namespace ProyectoProcImgs
             // 
             // miVideo
             // 
-            this.miVideo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.miVideo.Location = new System.Drawing.Point(30, 151);
+            this.miVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.miVideo.Location = new System.Drawing.Point(67, 121);
             this.miVideo.Name = "miVideo";
-            this.miVideo.Size = new System.Drawing.Size(813, 585);
+            this.miVideo.Size = new System.Drawing.Size(515, 443);
             this.miVideo.TabIndex = 9;
             this.miVideo.Text = "videoSourcePlayer1";
             this.miVideo.VideoSource = null;
@@ -160,10 +163,11 @@ namespace ProyectoProcImgs
             // 
             // miVideoFiltro
             // 
-            this.miVideoFiltro.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.miVideoFiltro.Location = new System.Drawing.Point(888, 151);
+            this.miVideoFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.miVideoFiltro.Location = new System.Drawing.Point(1057, 121);
             this.miVideoFiltro.Name = "miVideoFiltro";
-            this.miVideoFiltro.Size = new System.Drawing.Size(774, 585);
+            this.miVideoFiltro.Size = new System.Drawing.Size(506, 443);
             this.miVideoFiltro.TabIndex = 10;
             this.miVideoFiltro.Text = "videoSourcePlayer1";
             this.miVideoFiltro.VideoSource = null;
@@ -172,7 +176,7 @@ namespace ProyectoProcImgs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1674, 944);
+            this.ClientSize = new System.Drawing.Size(1674, 749);
             this.Controls.Add(this.miVideoFiltro);
             this.Controls.Add(this.miVideo);
             this.Controls.Add(this.button4);

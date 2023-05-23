@@ -1,3 +1,4 @@
+D:\Desktop\haarcascade_frontalface_alt2.xml
 D:\Desktop\ProyectoProcImgs.exe
 D:\Desktop\ProyectoProcImgs.dll
 D:\Desktop\ProyectoProcImgs.deps.json

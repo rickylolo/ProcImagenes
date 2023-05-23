@@ -58,7 +58,7 @@ namespace ProyectoProcImgs
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1381, 38);
+            this.button3.Location = new System.Drawing.Point(1270, 16);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(53, 23);
             this.button3.TabIndex = 15;
@@ -70,7 +70,7 @@ namespace ProyectoProcImgs
             // 
             this.cmbFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltros.FormattingEnabled = true;
-            this.cmbFiltros.Location = new System.Drawing.Point(1237, 38);
+            this.cmbFiltros.Location = new System.Drawing.Point(1126, 17);
             this.cmbFiltros.Name = "cmbFiltros";
             this.cmbFiltros.Size = new System.Drawing.Size(121, 23);
             this.cmbFiltros.TabIndex = 14;
@@ -80,7 +80,7 @@ namespace ProyectoProcImgs
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1295, 848);
+            this.button2.Location = new System.Drawing.Point(1194, 572);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 50);
             this.button2.TabIndex = 13;
@@ -90,20 +90,19 @@ namespace ProyectoProcImgs
             // 
             // pictureBoxRGB
             // 
-            this.pictureBoxRGB.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxRGB.Location = new System.Drawing.Point(704, 95);
+            this.pictureBoxRGB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxRGB.Location = new System.Drawing.Point(746, 86);
             this.pictureBoxRGB.Name = "pictureBoxRGB";
-            this.pictureBoxRGB.Size = new System.Drawing.Size(364, 306);
+            this.pictureBoxRGB.Size = new System.Drawing.Size(272, 214);
             this.pictureBoxRGB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRGB.TabIndex = 12;
             this.pictureBoxRGB.TabStop = false;
             // 
             // pictureBoxOriginal
             // 
-            this.pictureBoxOriginal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBoxOriginal.Location = new System.Drawing.Point(30, 104);
+            this.pictureBoxOriginal.Location = new System.Drawing.Point(34, 86);
             this.pictureBoxOriginal.Name = "pictureBoxOriginal";
-            this.pictureBoxOriginal.Size = new System.Drawing.Size(652, 535);
+            this.pictureBoxOriginal.Size = new System.Drawing.Size(545, 436);
             this.pictureBoxOriginal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOriginal.TabIndex = 11;
             this.pictureBoxOriginal.TabStop = false;
@@ -112,7 +111,7 @@ namespace ProyectoProcImgs
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1120, 41);
+            this.label2.Location = new System.Drawing.Point(1009, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 9;
@@ -134,7 +133,7 @@ namespace ProyectoProcImgs
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(30, 848);
+            this.button1.Location = new System.Drawing.Point(44, 572);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 50);
             this.button1.TabIndex = 10;
@@ -144,49 +143,48 @@ namespace ProyectoProcImgs
             // 
             // pictureBoxFiltro
             // 
-            this.pictureBoxFiltro.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBoxFiltro.Location = new System.Drawing.Point(30, 104);
+            this.pictureBoxFiltro.Location = new System.Drawing.Point(34, 86);
             this.pictureBoxFiltro.Name = "pictureBoxFiltro";
-            this.pictureBoxFiltro.Size = new System.Drawing.Size(652, 535);
+            this.pictureBoxFiltro.Size = new System.Drawing.Size(545, 436);
             this.pictureBoxFiltro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFiltro.TabIndex = 16;
             this.pictureBoxFiltro.TabStop = false;
             // 
             // pictureBoxR
             // 
-            this.pictureBoxR.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxR.Location = new System.Drawing.Point(1093, 95);
+            this.pictureBoxR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxR.Location = new System.Drawing.Point(1063, 86);
             this.pictureBoxR.Name = "pictureBoxR";
-            this.pictureBoxR.Size = new System.Drawing.Size(364, 306);
+            this.pictureBoxR.Size = new System.Drawing.Size(260, 214);
             this.pictureBoxR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxR.TabIndex = 17;
             this.pictureBoxR.TabStop = false;
             // 
             // pictureBoxG
             // 
-            this.pictureBoxG.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxG.Location = new System.Drawing.Point(704, 458);
+            this.pictureBoxG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxG.Location = new System.Drawing.Point(746, 336);
             this.pictureBoxG.Name = "pictureBoxG";
-            this.pictureBoxG.Size = new System.Drawing.Size(364, 306);
+            this.pictureBoxG.Size = new System.Drawing.Size(272, 186);
             this.pictureBoxG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxG.TabIndex = 18;
             this.pictureBoxG.TabStop = false;
             // 
             // pictureBoxB
             // 
-            this.pictureBoxB.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxB.Location = new System.Drawing.Point(1093, 458);
+            this.pictureBoxB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxB.Location = new System.Drawing.Point(1063, 336);
             this.pictureBoxB.Name = "pictureBoxB";
-            this.pictureBoxB.Size = new System.Drawing.Size(364, 306);
+            this.pictureBoxB.Size = new System.Drawing.Size(260, 186);
             this.pictureBoxB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxB.TabIndex = 19;
             this.pictureBoxB.TabStop = false;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(860, 77);
+            this.label3.Location = new System.Drawing.Point(863, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 15);
             this.label3.TabIndex = 20;
@@ -194,9 +192,9 @@ namespace ProyectoProcImgs
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(860, 440);
+            this.label4.Location = new System.Drawing.Point(854, 318);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 15);
             this.label4.TabIndex = 21;
@@ -204,9 +202,9 @@ namespace ProyectoProcImgs
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1270, 77);
+            this.label5.Location = new System.Drawing.Point(1182, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 15);
             this.label5.TabIndex = 22;
@@ -214,9 +212,9 @@ namespace ProyectoProcImgs
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1259, 440);
+            this.label6.Location = new System.Drawing.Point(1179, 318);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 15);
             this.label6.TabIndex = 23;
@@ -227,7 +225,7 @@ namespace ProyectoProcImgs
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1469, 916);
+            this.ClientSize = new System.Drawing.Size(1469, 749);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
