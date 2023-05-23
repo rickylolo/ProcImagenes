@@ -20,7 +20,7 @@ namespace ProyectoProcImgs
         private bool isFormClosing = false;
 
 
-        CascadeClassifier faceCascade = new CascadeClassifier("C:/Users/ricky/source/repos/ProyectoProcImgs/ProcImagenes/ProyectoProcImgs/haarcascade_frontalface_alt2.xml");
+        CascadeClassifier faceCascade = new CascadeClassifier("C:/Users/ricky/Documents/GitHub/ProcImagenes/ProyectoProcImgs/haarcascade_frontalface_alt2.xml");
         public FaceRecog()
         {
             InitializeComponent();
@@ -66,12 +66,11 @@ namespace ProyectoProcImgs
         {
             if(myWebCam!=null && myWebCam.IsRunning)
             {
-                if (myWebCam != null && myWebCam.IsRunning)
-                {
+
                     myWebCam.SignalToStop();
                     myWebCam.WaitForStop();
                     myWebCam = null;
-                }
+                
 
             }
         }
@@ -142,14 +141,15 @@ namespace ProyectoProcImgs
 
         private void FaceRecog_FormClosed(object sender, FormClosedEventArgs e)
         {
-         
+            closeWebCam();
 
         }
 
         private void FaceRecog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            isFormClosing = true;
- 
+            closeWebCam();
+
+
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj": {}
+    "C:\\Users\\ricky\\Documents\\GitHub\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj": {
+    "C:\\Users\\ricky\\Documents\\GitHub\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
+        "projectUniqueName": "C:\\Users\\ricky\\Documents\\GitHub\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
         "projectName": "ProyectoProcImgs",
-        "projectPath": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
+        "projectPath": "C:\\Users\\ricky\\Documents\\GitHub\\ProcImagenes\\ProyectoProcImgs\\ProyectoProcImgs.csproj",
         "packagesPath": "C:\\Users\\ricky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ricky\\source\\repos\\ProyectoProcImgs\\ProcImagenes\\ProyectoProcImgs\\obj\\",
+        "outputPath": "C:\\Users\\ricky\\Documents\\GitHub\\ProcImagenes\\ProyectoProcImgs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricky\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AForge.Controls": {
               "target": "Package",
@@ -83,7 +81,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
